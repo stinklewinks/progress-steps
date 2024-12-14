@@ -12,7 +12,7 @@ next.addEventListener('click', () => {
     if (nextStep) {
         currentStep.classList.remove('active');
         nextStep.classList.add('active');
-        progress.style.width = `${(currentActive / steps.length) * 100}` + '%';
+        progress.style.width = `${((currentActive - 1) / (steps.length - 1)) * 100}` + '%';
     }
 });
 
@@ -23,6 +23,11 @@ prev.addEventListener('click', () => {
     if (prevStep) {
         currentStep.classList.remove('active');
         prevStep.classList.add('active');
+        progress.style.width = `${((currentActive - 1) / (steps.length - 1)) * 100}` + '%';
+    }
+    if(currentStep.previousElementSibling === null){
+        currentActive = 1;
+        steps[0].classList.add('active');
         progress.style.width = `${((currentActive - 1) / (steps.length - 1)) * 100}` + '%';
     }
 });

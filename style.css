@@ -2,17 +2,14 @@
     margin: 0 auto;
     width: 20vw;
     display: flex;
-    align-content: center;
-    justify-content: space-around;
     position: relative;
 }
 
 .progress-container {
-    margin: 0 auto;
+    margin: 10px;
     width: 20vw;
     display: flex;
-    align-content: center;
-    justify-content: space-around;
+    justify-content: space-between;
     position: relative;
 }
 
@@ -28,7 +25,7 @@
 
 .btn {
     color: white;
-    margin: 1px;
+    margin: 10px;
     height: 5vh;
     width: 4vw;
     background-color: #11a0FF;
@@ -45,7 +42,6 @@
     color: #11a0FF;
     align-content: center;
     flex: 0.08;
-    margin: 10px;
     border-radius: 50px;
     width: 0.5vw;
     height: 2vh;
@@ -61,13 +57,14 @@
 }
 
 .progress {
+    border-radius: 10px;
     background-color: #11a0FF;
     position: absolute;
     top: 50%;
     left: 0;
     transform: translateY(-50%);
-    height: 1vh;
-    width: 10%;
+    height: 0.6vh;
+    width: 5%;
     z-index: -1;
     transition: background-color 0.1s ease-in;
 
@@ -81,7 +78,7 @@
     top: 50%;
     left: 0;
     transform: translateY(-50%);
-    height: 1vh;
+    height: 0.5vh;
     width: 100%;
     z-index: -1;
     transform: translateY(-50%);
